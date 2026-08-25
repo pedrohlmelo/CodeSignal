@@ -52,10 +52,10 @@ public class Main {
                 melhor = nome;
             }
 
+            }
+            
             if(melhor == null){
                 break;
-            }
-
             }
             resultado.add(melhor);
             usados.add(melhor);
