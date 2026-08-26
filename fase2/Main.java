@@ -78,7 +78,7 @@ public class Main {
         freq.put("batata", 5);
         freq.put("cebola", 1);
         freq.put("alho", 3);
-        System.out.println(topN(freq,5));
+        System.out.println(topN(freq,3));
         //System.out.println(freq);
 
     }
