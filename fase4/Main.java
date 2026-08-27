@@ -1,6 +1,6 @@
-package fase4;
 
-static class Pessoa {
+import java.util.*;
+ class Pessoa {
     String nome;
     String cidade;
 
@@ -17,15 +17,27 @@ static class Pessoa {
         return cidade;
     }
 
-    }
-
-    Static Map<String,List<String>>
-
-    agruparPorCidade(List<Pessoa> pessoas){
-
- }
+}
 
 public class Main {
+
+    static Map<String,List<String>> agruparPorCidade(List<Pessoa> pessoas){
+        Map< String, List<String>> grupos = new HashMap<>();
+       for(Pessoa p : pessoas){
+           String cidade = p.getCidade();
+           String nome = p.getNome();
+   
+           if(grupos.containsKey(cidade)){
+              grupos.get(cidade).add(nome);
+           }
+           else{
+               grupos.put(cidade, new ArrayList<>());
+               grupos.get(cidade).add(nome);
+           }
+       }
+       return grupos;  
+    }
+    
     public static void main(String[] args){
         List<Pessoa> pessoas = new ArrayList<>();
         pessoas.add(new Pessoa("Ana", "BH"));
