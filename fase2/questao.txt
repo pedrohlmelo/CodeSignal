@@ -1,0 +1,11 @@
+Dado um Map<String, Integer> freq (frequência de palavras) e um int n, retorne uma List<String> com os N nomes mais frequentes.
+
+Ordenar por:
+
+Frequência decrescente (maior primeiro)
+Nome alfabético crescente (desempate)
+
+freq = {sol=5, lua=3, sol_pôr=5, vento=1, mar=3}
+n = 3
+
+saída: [sol, sol_pôr, lua]
