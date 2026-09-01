@@ -1,0 +1,5 @@
+Dado um Map<String, Integer> estoque (produto → quantidade), retorne o nome do produto com maior quantidade em estoque, ou Optional.empty() se o estoque vazio.
+
+entrada: {arroz=5, feijao=3, batata=5, cebola=1, alho=3}
+
+esperado: Optional[arroz]
