@@ -1,0 +1,1 @@
+estrutura referente a adiciao e remocao pronta em lista e HashMap(estrutura mais basica possivel).
