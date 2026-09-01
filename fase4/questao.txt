@@ -1,0 +1,9 @@
+Dada uma List<Pessoa> com nome e cidade, retorne um Map<String, List<String>> agrupando os nomes por cidade.
+
+entrada: [
+  Pessoa("Ana", "BH"),
+  Pessoa("Bruno", "SP"),
+  Pessoa("Carla", "BH")
+]
+
+esperado: {BH=[Ana, Carla], SP=[Bruno]}
