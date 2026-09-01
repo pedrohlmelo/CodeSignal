@@ -1,0 +1,3 @@
+Dada uma List<String> de palavras, retorne um Map<String, Integer> com a frequência de cada palavra, ignorando palavras menores que 3 caracteres.
+entrada: ["sol", "a", "lua", "sol", "de", "sol"]
+saída: {sol=3, lua=1}

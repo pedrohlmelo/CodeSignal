@@ -11,7 +11,7 @@ import java.util.*;
 
     String getNome() {
         return nome;
-    }
+     }
 
     String getCidade() {
         return cidade;
