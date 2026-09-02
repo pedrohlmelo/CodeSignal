@@ -228,7 +228,7 @@ entradas.sort((a, b) -> {
 });
 ```
 
-**Decore essa versão explícita.** É mais longa mas você entende cada linha, e funciona sempre.
+
 
 ### A regra do sinal
 
@@ -308,7 +308,7 @@ if (r == null || !r.vivoEm(agora)) return Optional.empty();
 return Optional.of(r.valor);
 ```
 
-Não apague o registro expirado na hora — só ignore. Níveis posteriores costumam pedir consulta histórica ("qual era o valor no instante T").
+
 
 ### Histórico de versões (padrão do Level 4)
 ```java
@@ -327,52 +327,5 @@ void set(String k, String v, long t) {
 // versão vigente no instante t: última entrada com timestamp <= t
 ```
 
----
-
-## 5. Erros que custam tempo
-
-| Erro | Sintoma | Correção |
-|---|---|---|
-| Falta `public` no método da interface | "weaker access privileges" | Adicione `public` |
-| Falta `import` | "cannot find symbol" | `import java.util.*;` |
-| `valueof` / `Valueof` | "cannot find symbol" | `valueOf` (O maiúsculo) |
-| `lista.remove(int)` | remove errado / IndexOutOfBounds | `remove(Integer.valueOf(x))` |
-| `String == String` | comparação falha silenciosamente | `.equals()` |
-| Unboxing de `null` | NullPointerException | `Integer x = map.get(k); if (x == null)` |
-| Ordenar a lista original em um `get` | efeito colateral escondido | `new ArrayList<>(items)` antes de ordenar |
-| Chave com contagem 0 no Map | `delete` retorna `true` errado | `map.remove(k)` quando chega a zero |
-| Campo `static` | testes vazam estado entre si | nunca use `static` para estado |
-
 **Índice da mediana (menor dos dois centrais):** `(n - 1) / 2` — funciona para par e ímpar.
 
----
-
-## 6. Setup do dia (câmera + tela + microfone)
-
-### Antes
-
-- Confirme no e-mail de convite se **rascunho em papel** é permitido. Se for: folha em branco, mostrada à câmera antes de começar.
-- Alternativa sempre permitida: rascunhar em comentário dentro do `SandboxTests.java`.
-- Feche tudo que não for o teste. Deixe aberto só o navegador do assessment.
-- Teste câmera e microfone 15 min antes.
-- Ambiente: sozinho no cômodo, celular longe, mesa limpa.
-
-### Durante
-
-- Ficar 3 minutos parado pensando é **normal** e não é sinalizado. Não force digitação por nervosismo.
-- Pensar em voz alta é permitido e não atrapalha nada.
-- Consultar documentação oficial do Java é permitido na maioria das configurações — confirme no enunciado.
-
-### Ensaio obrigatório
-
-Faça **pelo menos um simulado completo de 90 min com a webcam ligada e gravando você mesmo**. O problema da câmera não é regra, é ansiedade de performance — e ela cai drasticamente depois da primeira exposição.
-
----
-
-## 7. Checklist final antes do Submit
-
-- [ ] Todos os testes verdes na aba **Unit Tests**
-- [ ] `SandboxTests` compila (senão o build inteiro quebra)
-- [ ] `System.out.println` de debug removidos
-- [ ] Nenhuma assinatura de método alterada
-- [ ] Níveis anteriores ainda passam
