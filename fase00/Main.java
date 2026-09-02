@@ -10,7 +10,7 @@ public class Main {
         // podem pedir numeros unicos
 
         //if(ids.contains(value)){
-            //ecxeption
+            //exception
         //}
 
         ids.add(value);
